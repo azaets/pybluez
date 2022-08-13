@@ -40,6 +40,7 @@ elif sys.platform.startswith('linux'):
                      #extra_compile_args=['-O0'],
                      sources = ['bluetooth/linux/bluez/btmodule.c', 'bluetooth/linux/bluez/btsdp.c'])
     ext_modules.append(mod1)
+    packages.append("bluetooth.linux")
 
 elif sys.platform.startswith("darwin"):
     packages.append("bluetooth.macos")
