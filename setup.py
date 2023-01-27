@@ -38,7 +38,8 @@ elif sys.platform.startswith('linux'):
     mod1 = Extension('bluetooth._bluetooth',
                      libraries = ['bluetooth'],
                      #extra_compile_args=['-O0'],
-                     sources = ['bluetooth/linux/bluez/btmodule.c', 'bluetooth/linux/bluez/btsdp.c'])
+                     sources = ['bluetooth/linux/bluez/btmodule.c', 'bluetooth/linux/bluez/btsdp.c'],
+                     include_dirs = ['bluetooth/linux/bluez'])
     ext_modules.append(mod1)
     packages.append("bluetooth.linux")
 
